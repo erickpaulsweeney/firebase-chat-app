@@ -1,0 +1,285 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.container-all, .container-rooms, .container-convo {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e8e8ff;
+}
+
+.container-header {
+    height: 10%;
+    width: 100%;
+    background-color: #7473ca;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header-name {
+    font-size: 40px;
+}
+
+.nav-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.username {
+    font-size: 14px;
+}
+
+.avatar {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+}
+
+.nav-btn {
+    background-color: transparent;
+    border: none;
+    font: inherit;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    color: #a9a9ff;
+}
+
+.container-login {
+    height: 90%;
+    background-color: #e8e8ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-name {
+    font-size: 40px;
+}
+
+.google-login {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.container-chatrooms {
+    width: 40%;
+    height: 90%;
+    position: relative;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.chatroom-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.container-main {
+    background-color: white;
+    border-radius: 10px;
+    height: 85%;
+}
+
+.rooms-main {
+    height: 90%;
+    padding: 20px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    gap: 10px;
+}
+
+.rooms-main::-webkit-scrollbar {
+    display: none;
+}
+
+.input-row {
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.input-bar {
+    width: 90%;
+    border: 2px solid #cac9ca;
+    border-radius: 3px;
+    font-size: 20px;
+    padding-left: 5px;
+}
+
+.add-btn {
+    width: 10%;
+    border: none;
+    color: #7473ca;
+    background-color: transparent;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.room-item {
+    border: 2px solid #cac9ca;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.room-name {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.room-admin {
+    font-size: 18px;
+}
+
+.back-btn {
+    position: absolute;
+    font-size: 50px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.chats-main {
+    height: 90%;
+    padding: 20px 25px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: scroll;
+    gap: 10px;
+}
+
+.chats-main::-webkit-scrollbar {
+    display: none;
+}
+
+.chat-item {
+    background-color: #e5ecf6;
+    margin: 40px 0px 10px;
+    position: relative;
+    display: flex;
+    max-width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.chat-date {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    font-size: 12px;
+    color: #8f8f8f;
+    min-width: 200px;
+    max-width: 100%;
+}
+
+.chat-triangle {
+    position: absolute;
+    top: 0;
+    left: -10px;
+    border-top: 10px solid #e5ecf6;
+    border-right: 10px solid #e5ecf6;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    width: 20px;
+    height: 20px;
+}
+
+.sender-name {
+    position: absolute;
+    top: -35px;
+    left: 0;
+    font-size: 12px;
+    color: #8f8f8f;
+}
+
+.sender {
+    background-color: #f1f1f2;
+    margin-top: 20px;
+    align-self: flex-end;
+}
+
+.sender .chat-date {
+    text-align: right;
+    left: initial;
+    right: 0;
+}
+
+.sender .chat-triangle {
+    left: initial;
+    right: -10px;
+    border-top: 10px solid #f1f1f2;
+    border-left: 10px solid #f1f1f2;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    cursor: pointer;
+    color: #cac9ca;
+}
+
+.delete-btn:hover {
+    color: red;
+}
+
+.delete-room {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #cac9ca;
+    z-index: 3;
+}
+
+.delete-room:hover {
+    color: red;
+}
